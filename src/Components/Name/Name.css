@@ -1,0 +1,10 @@
+
+.name {
+    display: flex;
+    justify-content: center;
+    font-size: -webkit-xxx-large;
+}
+h2.first_name {
+    margin-right: 1%;
+    color: #eb8d0a;
+}

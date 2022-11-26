@@ -1,0 +1,11 @@
+/* .masthead {
+    display: flex;
+    justify-content: space-around;
+} */
+.masthead {
+    background: #333;
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+  }
+  

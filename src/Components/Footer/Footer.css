@@ -1,0 +1,14 @@
+/* .masthead {
+    display: flex;
+    justify-content: space-around;
+} */
+.footer {
+    height: 300px;
+    width: 100%;
+    background-color: hsl(271, 51%, 59%);
+
+}
+  
+.footer h2 {
+    color: #fff;
+}
