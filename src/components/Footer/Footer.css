@@ -1,0 +1,28 @@
+.footer {
+    min-height: 300px;
+    background: #98a9b4;
+    display: flex;
+    flex-direction: column;
+}
+img.footer_github {
+    min-width: 50px;
+    min-height: 50px;
+}
+.footer_social_links_wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.footer_social_links {
+    min-width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_copy_rights {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    font-weight: 300;
+}
