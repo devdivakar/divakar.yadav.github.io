@@ -20,7 +20,7 @@ const Detail = () => {
         <div className='detail_title'>Audit Management System High Level OverView</div>
       {/* Your contact page content goes here */}
       <div className='detail_banner_image'>
-        <img src ={banner} className='detail_banner' onClick={()=>{openPopup(banner)}}/>
+        <Object src ={banner} className='detail_banner' onClick={()=>{openPopup(banner)}}/>
       </div>
       {popupOpen && (
         <div
