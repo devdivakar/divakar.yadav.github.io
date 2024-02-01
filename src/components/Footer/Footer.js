@@ -13,6 +13,9 @@ const Footer = () => {
 
   return (
     <div className='footer'>
+        <div className='contact_me_email'>
+          <div className='contact_me_text'>Say hi! Drop your message </div>
+        </div>
         <div className='footer_social_links_wrapper'>
         <div className='footer_social_links'>
             <a href=''><img src = {github} className='footer_github'/></a>

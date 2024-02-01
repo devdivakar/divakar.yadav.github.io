@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import banner from '../../assets/images/Marc.drawio.svg'
+import banner from '../../assets/images/test6.svg'
 import './Detail.css';
 const Detail = () => {
     const [popupOpen, setPopupOpen] = useState(false);
@@ -15,12 +15,23 @@ const Detail = () => {
         setPopupOpen(false);
       };
   return (
+    <>
     <div className='detail'>
         <div className='detail_page_container'>
         <div className='detail_title'>Audit Management System High Level OverView</div>
       {/* Your contact page content goes here */}
-      <div className='detail_banner_image'>
-        <img src ={banner} className='detail_banner' onClick={()=>{openPopup(banner)}}/>
+      {/* <div className='detail_banner_image'>
+        <object src ={banner} className='detail_banner' onClick={()=>{openPopup(banner)}}/>
+      </div> */}
+      <div className='detail_banner_image' onClick={() => openPopup(banner)} style={{ position: 'relative' }}>
+        <object
+          type='image/svg+xml'
+          data={banner}
+          className='detail_banner'
+          style={{ pointerEvents: 'none' }}
+        >
+          Your browser does not support SVG
+        </object>
       </div>
       {popupOpen && (
         <div
@@ -102,6 +113,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       </div>
         </div>
     </div>
+    </>
   );
 };
 

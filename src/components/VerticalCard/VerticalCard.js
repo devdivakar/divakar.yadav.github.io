@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './VerticalCard.css';
 
 const VerticalCard = ({ imageUrl, title, description, chips }) => {
-  console.log("----width----",window.innerWidth)
+  console.log("----imageUrl----",imageUrl)
 
   return (
     // <div className='vertical_card_wrapper'>
     <div className="vertical_card">
     <div class="vertical-image-container">
-      <img src={imageUrl} alt="Card Image" className="vertical_card_img" />
+      <img src={imageUrl.default} alt="Card Image" className="vertical_card_img" />
       <div class="image-overlay">View</div>
       </div>
       <Link to="/project/detail" style={{ textDecoration: 'none', outline: 'none' }}>

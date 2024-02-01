@@ -26,3 +26,13 @@ img.footer_github {
     margin: 20px 0 20px 0;
     font-weight: 300;
 }
+.contact_me_email {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.contact_me_text {
+    font-size: 3rem;
+    font-family: fantasy;
+    font-weight: 100;
+}
