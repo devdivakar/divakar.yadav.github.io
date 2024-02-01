@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './HorizontalCard.css';
+import banner from '../../assets/images/test1.svg'
 
 const HorizontalCard = ({ imageUrl, title, description,chips }) => {
     const [popupOpen, setPopupOpen] = useState(false);
@@ -19,7 +20,7 @@ const HorizontalCard = ({ imageUrl, title, description,chips }) => {
   return (
     <div className="card">
     <div class="image-container" onClick={()=>{openPopup(imageUrl)}}>
-      <img src={imageUrl} alt="Card Image" className="card-img" />
+      <img src={imageUrl.default} alt="Card Image" className="card-img" />
       <div class="image-overlay">View</div>
       </div>
       {popupOpen && (

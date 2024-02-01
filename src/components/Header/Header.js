@@ -45,10 +45,10 @@ const Header = () => {
   };
 
   const navLinks = [
-    { url: 'about-us', name: 'About Us' },
+    { url: 'about-me', name: 'About Me' },
     { url: 'projects', name: 'Projects' },
     { url: 'blogs', name: 'Blogs' },
-    { url: 'contact-us', name: 'Contact Us' },
+    { url: 'contact-me', name: 'Contact Me' },
   ];
   return (
     <div className='header_wrapper_outer'>
@@ -66,11 +66,14 @@ const Header = () => {
           )}
         </div>
     <div className='symlinks'>
-      <span>Blogs</span>
-      <span>GitHub</span>
-      <span>Twitter</span>
+      {navLinks.map(({ url, name }) => (
+                  <li>
+                    <ScrollLink to={url} smooth={true} duration={500} onClick={closeMenu}>
+                    {name}
+          </ScrollLink>
+                  </li>
+                ))}
     </div>
-
 </div>
     <div>
           <div className={menuStatus.style}>
@@ -86,12 +89,10 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-
           </div>
     </div>
     <hr className='header_divider'/>
     </div>
-
   );
 };
 
