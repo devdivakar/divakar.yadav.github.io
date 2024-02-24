@@ -18,10 +18,10 @@ const Footer = () => {
         </div>
         <div className='footer_social_links_wrapper'>
         <div className='footer_social_links'>
-            <a href=''><img src = {github} className='footer_github'/></a>
-            <a href=''><img src = {linkedin} className='footer_linkedin'/></a>
-            <a href=''><img src = {facebook} className='footer_facebook'/></a>
-            <a href=''><img src = {instagram} className='footer_instagram'/></a>
+            <a href='https://github.com/divakar-yadav'><img src = {github} className='footer_github'/></a>
+            <a href='https://www.linkedin.com/in/divakar-yadav-816358137'><img src = {linkedin} className='footer_linkedin'/></a>
+            <a href='https://www.facebook.com/divakar.yadav.143'><img src = {facebook} className='footer_facebook'/></a>
+            {/* <a href=''><img src = {instagram} className='footer_instagram'/></a> */}
         </div>
         </div>
         <div className='footer_copy_rights'>

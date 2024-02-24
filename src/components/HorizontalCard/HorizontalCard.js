@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './HorizontalCard.css';
 import banner from '../../assets/images/test1.svg'
 
-const HorizontalCard = ({ imageUrl, title, description,chips }) => {
+const HorizontalCard = (props) => {
     const [popupOpen, setPopupOpen] = useState(false);
     const [popupImageSrc, setPopupImageSrc] = useState('');
 
@@ -12,15 +12,15 @@ const HorizontalCard = ({ imageUrl, title, description,chips }) => {
         setPopupImageSrc(imageSrc);
         setPopupOpen(true);
       };
-    
+
       const closePopup = () => {
         setPopupOpen(false);
       };
-
+      console.log(props.redirect,"redirect")
   return (
     <div className="card">
-    <div class="image-container" onClick={()=>{openPopup(imageUrl)}}>
-      <img src={imageUrl.default} alt="Card Image" className="card-img" />
+    <div class="image-container" onClick={()=>{openPopup(props.imageUrl)}}>
+      <img src={props.imageUrl.default} alt="Card Image" className="card-img" />
       <div class="image-overlay">View</div>
       </div>
       {popupOpen && (
@@ -70,19 +70,17 @@ const HorizontalCard = ({ imageUrl, title, description,chips }) => {
         </div>
       )}
 
-                    <Link to="/project/detail" style={{ textDecoration: 'none', outline: 'none' }}>
-                    <div className="card-content">
-        <h2 className="card-title">{title}</h2>
-        <p className="card-description">{description}</p>
-        <div className="horizontal_card_chips">
-              {chips.map((chip, index) => (
-                <span key={index} className="chip">{chip}</span>
-              ))}
-            </div>
-      </div>
-                    </Link>
-
-
+        <Link to= '/detail' state={ {detail: JSON.stringify(props.detail) }}  style={{ textDecoration: 'none', outline: 'none' }}>
+              <div className="card-content">
+              <h2 className="card-title">{props.title}</h2>
+              <p className="card-description">{props.description}</p>
+              <div className="horizontal_card_chips">
+                    {props.chips.map((chip, index) => (
+                      <span key={index} className="chip">{chip}</span>
+                    ))}
+              </div>
+              </div>
+        </Link>
     </div>
   );
 };
